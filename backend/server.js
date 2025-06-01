@@ -16,7 +16,7 @@ app.post('/submit', (req, res) => {
             console.error('Insert error:', err);
             return res.status(500).send('Database error');
         }
-        res.send('Data submitted successfully!');
+        res.send('Data submittdded successfully!');
     });
 });
 
