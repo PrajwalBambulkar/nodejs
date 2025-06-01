@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout scm
+                checkout changelog: true, poll: true,scm: scm
             }
         }
 
@@ -57,7 +57,7 @@ pipeline {
             steps {
                 dir('backend') {
                     script {
-                        docker.withRegistry('https://index.docker.io/v1/', 'docker-hub-credentials') {
+                        docker.withRegistry('https://index.docker.io/v1/', '03b85bf0-3391-428c-bd80-0fce51e052b5') {
                             docker.image("${DOCKER_IMAGE}:${env.BUILD_NUMBER}").push()
                         }
                     }
