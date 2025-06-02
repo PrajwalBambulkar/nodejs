@@ -7,7 +7,7 @@ pipeline {
 
     environment {
         DOCKER_IMAGE = 'prajwalbambulkar/3tiernodejs'
-        IMAGE_TAG = "frontend-${BUILD_NUMBER}"
+        IMAGE_TAG = "latest"
     }
 
     stages {
