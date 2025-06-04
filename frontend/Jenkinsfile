@@ -6,8 +6,8 @@ pipeline {
     }
 
     environment {
-        DOCKER_IMAGE = 'prajwalbambulkar/3tiernodejs-frontend'
-        IMAGE_TAG = "${BUILD_NUMBER}"
+        DOCKER_IMAGE = 'prajwalbambulkar/3tiernodejs'
+        IMAGE_TAG = "frontend-${BUILD_NUMBER}"
     }
 
     stages {
