@@ -1,7 +1,7 @@
 FROM ubuntu
 
 RUN apt update && \
-    apt install -y apache2 apache2-utils libapache2-mod-proxy-html libxml2-dev && \
+    apt install -y apache2 apache2-utils libxml2-dev && \
     a2enmod proxy proxy_http && \
     apt clean
 
